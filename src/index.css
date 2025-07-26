@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+@config "../tailwindcss.config.js";
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Css  */
+.custom-radial-bg {
+  position: relative;
+  background-color: #1D483B;
+}
+
+.custom-radial-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(
+    from 0deg,
+    #357355 0deg 2deg,
+    #1D483B 2deg 12deg
+  );
+  opacity: 0.4;
+  z-index: 0;
+}
